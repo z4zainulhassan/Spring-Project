@@ -1,0 +1,51 @@
+
+	Kindly make a sample application using Java rest backend (Spring) and Frontend UI 
+	contain create, read , update and delete (CRUD)  operation for the below database schema 
+	
+
+	1- Backend webservice should use spring
+	2- Front End can use JSF preferrable or/and Angular TypeScript or you can expose APIs using swagger 
+	3- use H2 in memory database for ease of testing
+	4- List page should have paging 
+	5- first_name and last_name should be not be null and more than 2 chars each 
+	6- validate that salary is greater than 0
+	7- validate phone_number contain only digits and dashs 
+
+===========================
+provide a how to use document contains screenshot for the create and read scenarios 
+
+push the project code as git repo in github.com or gitlab.com and share the repo link 
+	
+	
+	
+=== 
+Below schema is a guidline , you can use jpa /hibernate  to generate your schema if you wish 
+	
+CREATE TABLE departments
+   ( department_id NUMBER(4)
+   , department_name VARCHAR2(30)
+   , manager_id NUMBER(6)
+   ) ;
+   
+ALTER TABLE departments
+    ADD ( 
+   PRIMARY KEY(department_id)
+   ) ;   
+   
+   CREATE TABLE employees
+   ( employee_id NUMBER(6)
+   , first_name VARCHAR2(20)
+   , last_name VARCHAR2(25)   
+   , email VARCHAR2(25)
+   , phone_number VARCHAR2(20)
+   , hire_date DATE
+   , salary NUMBER(8,2)
+   , manager_id NUMBER(6)
+   , department_id NUMBER(4)   
+   ) ;
+   
+   
+ALTER TABLE employees
+         ADD ( 
+   PRIMARY KEY(employee_id)
+   ) ; 
